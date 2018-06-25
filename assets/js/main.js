@@ -17,3 +17,23 @@ title.css('text-align', 'center');
 wink.css('height', '30px');
 
 // Go nuts
+class GiphySearch {
+    constructor(searchString) {
+      this.searchString = "&q=" + searchString;
+      
+    }
+  
+    commit() {
+        db.push(this);
+    }
+
+    getGifs() {
+        $.ajax({
+            url: "http://api.giphy.com/v1/gifs/search?api_key=" + giphyApiKey + "&limit=20&q=" + this.searchString,
+            method: 'GET'
+        }).then(function(response) {
+            console.log(response);
+        })
+    }
+  
+  }
