@@ -36,8 +36,43 @@
 <body>
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h1 id="title">Hey there <img id="wink" src="assets/img/delete-me.png" alt="winky" /> </h1>
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        <strong><i class="fa fa-list-alt"></i> Search GIFs</strong>
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="search">Search GIPHY:</label>
+                            <input type="text" class="form-control" id="search-term">
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary" id="run-search">
+                                <i class="fa fa-search"></i> Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header"><strong><i class="fa fa-table"></i> Recent Searches</strong></div>
+                    <div class="card-body">
+                        <div class="row" id="recent-searches"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <div class="card-header"><strong><i class="fa fa-table"></i> Results</strong></div>
+                    <div class="card-body">
+                        <div class="row" id="search-results"></div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
